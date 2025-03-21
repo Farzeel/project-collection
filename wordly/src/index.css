@@ -1,52 +1,26 @@
-.container{
-  display: flex;
-  gap: 5px;
+@import "tailwindcss";
+
+  .gappp > div:first-child {
+
+    animation: pulse 2s infinite;
   }
-  .gappp{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
   }
-  .cell{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    width: 60px;
-    height: 60px;
-    border: 2px solid rgb(131, 119, 119);
-    font-size: 40px;
-    transform-style: preserve-3d;
-    
-    /* transition: transform 0.5s ease-in-out; */
-  }
-  .cell.animate {
+
+  .animate-flip {
     animation: flipReveal 0.3s ease-in-out;
     /* transform: rotateX(360deg); */
   }
-  .cell.active {
-    border: 2px solid #100d0d;
-    
-  }
-  
-  .cell.correct {
-    background-color: #6aaa64;
-    color: white;
-    border-color: #6aaa64;
-  }
-  
-  .cell.present {
-    background-color: #c9b458;
-    color: white;
-    border-color: #c9b458;
-  }
-  
-  .cell.absent {
-    background-color: #787c7e;
-    color: white;
-    border-color: #787c7e;
-  }
 
+  
+
+
+    
+
+  
   
   /* Keyframes for the pop-in animation */
   @keyframes flipReveal {
@@ -75,3 +49,136 @@
       opacity: 1; /* Fully visible */
     }
   }
+
+  /* for INSTRUCTION.JSX */
+  .InstructionBody{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  .div-container {
+    width: 600px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.instruction-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.top-bar {
+  width: 100%;
+  background-color: #e8f0fe; /* Light blue background */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Added margin */
+}
+.top-bar h4 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.top-bar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5em;
+}
+.word-example {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.word-example span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+}
+.word-example span.yellow {
+    background-color: #ffc107;
+}
+.word-example span.green {
+    background-color: #4caf50;
+}
+.word-example span.gray {
+    background-color: #9e9e9e;
+}
+.feedback {
+    margin-bottom: 10px;
+}
+.feedback strong {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+.feedback strong.gray {
+    background-color: #9e9e9e;
+}
+.feedback strong.yellow {
+    background-color: #ffc107;
+}
+.feedback strong.green {
+    background-color: #4caf50;
+}
+.try-example {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.try-example span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+}
+.try-example span.green {
+    background-color: #4caf50;
+}
+.try-example span.gray {
+    background-color: #9e9e9e;
+}
+.final-try {
+    text-align: center;
+    margin-top: 20px;
+}
+.final-try span {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    background-color: #4caf50;
+}
+.final-try img {
+    width: 20px;
+    vertical-align: middle;
+}
